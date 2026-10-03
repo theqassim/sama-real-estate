@@ -1,0 +1,54 @@
+[
+  {
+    "id": "p-3",
+    "title": "محل تجاري على شارع رئيسي",
+    "type": "شقة",
+    "mode": "rent",
+    "location": "العاصمة الإدارية الجديدة",
+    "area": 85,
+    "beds": 0,
+    "baths": 1,
+    "price": 6200000,
+    "image": "",
+    "published": true
+  },
+  {
+    "id": "p-4",
+    "title": "شاليه على البحر مباشرة",
+    "type": "شاليه",
+    "mode": "sale",
+    "location": "الساحل الشمالي",
+    "area": 120,
+    "beds": 2,
+    "baths": 2,
+    "price": 7900000,
+    "image": "",
+    "published": true
+  },
+  {
+    "id": "p-5",
+    "title": "دوبلكس بروف بتراس واسع",
+    "type": "دوبلكس",
+    "mode": "sale",
+    "location": "المعادي، القاهرة",
+    "area": 210,
+    "beds": 4,
+    "baths": 3,
+    "price": 9300000,
+    "image": "",
+    "published": true
+  },
+  {
+    "id": "p-6",
+    "title": "استوديو مفروش للإيجار",
+    "type": "استوديو",
+    "mode": "rent",
+    "location": "الشيخ زايد، الجيزة",
+    "area": 55,
+    "beds": 1,
+    "baths": 1,
+    "price": 15000,
+    "image": "",
+    "published": true
+  }
+]

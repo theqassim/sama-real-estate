@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>لوحة تحكم سما العقارية</title>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6fa;--card:#fff;--ink:#0b1f3a;--soft:#4a5d78;--line:rgba(11,31,58,.14);--gold:#c9a24d;--gold-deep:#8f6f27;--danger:#b3261e}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans Arabic',Tahoma,sans-serif;line-height:1.7}
+.display{font-family:'Reem Kufi',Tahoma,sans-serif;font-weight:600}
+[hidden]{display:none!important}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 20px;border-radius:10px;border:1.5px solid transparent;font-weight:600;cursor:pointer;text-decoration:none;background:var(--ink);color:#fff}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-danger{background:transparent;border-color:rgba(179,38,30,.4);color:var(--danger)}
+.btn-sm{padding:5px 14px;font-size:.88rem}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+/* login */
+.login{min-height:100svh;display:grid;place-items:center;padding:20px}
+.login form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;width:min(400px,100%);display:grid;gap:16px;box-shadow:0 20px 50px -30px rgba(11,31,58,.4)}
+.login h1{font-size:2rem;margin:0}
+.login p{margin:0;color:var(--soft)}
+
+/* header */
+header.top{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px;flex-wrap:wrap}
+header.top h1{margin:0;font-size:1.5rem}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.tabs{display:flex;gap:6px;margin:24px 0 18px}
+.tab{padding:8px 22px;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;font-weight:500}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* list */
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.toolbar p{margin:0;color:var(--soft)}
+.item{display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:12px}
+.thumb{width:96px;height:72px;border-radius:10px;background:linear-gradient(160deg,#5b8cc6,#f0d3b9);display:grid;place-items:center;color:#fff;font-size:.8rem;overflow:hidden;text-align:center}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.item h3{margin:0;font-size:1.05rem}
+.meta{color:var(--soft);font-size:.9rem}
+.badge{display:inline-block;padding:0 10px;border-radius:6px;font-size:.78rem;font-weight:600;background:rgba(11,31,58,.08)}
+.badge.off{background:rgba(179,38,30,.1);color:var(--danger)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:640px){.item{grid-template-columns:72px 1fr}.thumb{width:72px;height:60px}.actions{grid-column:1/-1;justify-content:flex-start}}
+.empty{border:1px dashed var(--line);border-radius:14px;padding:40px;text-align:center;color:var(--soft)}
+
+/* forms */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+form.grid{display:grid;gap:16px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+label{display:grid;gap:5px;font-weight:500;font-size:.95rem}
+label small{color:var(--soft);font-weight:400}
+input[type=text],input[type=password],input[type=number],input[type=tel],select,textarea{width:100%;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.check{display:flex;align-items:center;gap:10px}
+.check input{width:20px;height:20px;accent-color:var(--ink)}
+.preview{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.preview img{width:140px;height:105px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+dialog{border:0;border-radius:16px;padding:0;width:min(640px,calc(100% - 24px));max-height:92svh;box-shadow:0 30px 80px -20px rgba(11,31,58,.5)}
+dialog::backdrop{background:rgba(11,31,58,.55)}
+dialog .panel{border:0;border-radius:16px}
+dialog h2{margin:0 0 16px;font-size:1.5rem}
+.err{color:var(--danger);font-weight:500;min-height:1.5em;margin:0}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 22px;border-radius:10px;z-index:100;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+</style>
+</head>
+<body>
+
+<!-- تسجيل الدخول -->
+<main class="login" id="loginView">
+  <form id="loginForm">
+    <h1 class="display">لوحة تحكم سما</h1>
+    <p>ادخل الباسورد عشان تدير العقارات.</p>
+    <label>الباسورد
+      <input type="password" id="pw" required autocomplete="current-password" autofocus>
+    </label>
+    <p class="err" id="loginErr" role="alert"></p>
+    <button class="btn btn-gold" type="submit">دخول</button>
+  </form>
+</main>
+
+<!-- التطبيق -->
+<div id="appView" hidden>
+  <header class="top">
+    <div class="wrap">
+      <h1 class="display">لوحة تحكم سما</h1>
+      <div class="row">
+        <a class="btn btn-ghost btn-sm" href="/" target="_blank">فتح الموقع</a>
+        <button class="btn btn-ghost btn-sm" id="logoutBtn" type="button">خروج</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tabP" aria-selected="true">العقارات</button>
+      <button class="tab" role="tab" id="tabS" aria-selected="false">إعدادات الموقع</button>
+    </div>
+
+    <section id="paneP">
+      <div class="toolbar">
+        <p id="count"></p>
+        <button class="btn btn-gold" id="addBtn" type="button">إضافة عقار</button>
+      </div>
+      <div id="list"></div>
+    </section>
+
+    <section id="paneS" hidden>
+      <form class="panel grid" id="settingsForm">
+        <label>رقم الواتساب
+          <input type="tel" id="sPhone" dir="ltr" style="text-align:right" required placeholder="201012345678">
+          <small>بالصيغة الدولية من غير + أو أصفار (مصر تبدأ بـ 20). بيتحط في كل أزرار الواتساب.</small>
+        </label>
+        <label>العنوان اللي بيظهر في الموقع
+          <input type="text" id="sAddress" maxlength="120">
+        </label>
+        <p class="err" id="sErr" role="alert"></p>
+        <div><button class="btn btn-gold" type="submit">حفظ الإعدادات</button></div>
+      </form>
+    </section>
+  </main>
+</div>
+
+<!-- فورم العقار -->
+<dialog id="dlg">
+  <form class="panel grid" id="propForm">
+    <h2 class="display" id="dlgTitle">إضافة عقار</h2>
+    <label>عنوان العقار
+      <input type="text" id="fTitle" required maxlength="120" placeholder="مثال: شقة 3 غرف بإطلالة حديقة">
+    </label>
+    <div class="cols">
+      <label>النوع <select id="fType" required></select></label>
+      <label>العرض
+        <select id="fMode"><option value="sale">للبيع</option><option value="rent">للإيجار</option></select>
+      </label>
+    </div>
+    <label>الموقع
+      <input type="text" id="fLocation" maxlength="120" placeholder="مثال: التجمع الخامس، القاهرة الجديدة">
+    </label>
+    <div class="cols">
+      <label>السعر (جنيه) <input type="number" id="fPrice" min="0" step="any" required><small id="priceHint">السعر الكلي</small></label>
+      <label>المساحة (م²) <input type="number" id="fArea" min="0" step="any"></label>
+      <label>الغرف <input type="number" id="fBeds" min="0" max="50"></label>
+      <label>الحمامات <input type="number" id="fBaths" min="0" max="50"></label>
+    </div>
+    <label>صورة العقار
+      <input type="file" id="fFile" accept="image/jpeg,image/png,image/webp">
+      <small>JPG أو PNG أو WebP، لحد 6 ميجا. لو سبتها فاضية بتظهر رسمة مؤقتة.</small>
+    </label>
+    <div class="preview" id="preview" hidden>
+      <img id="prevImg" alt="">
+      <button class="btn btn-danger btn-sm" id="rmImg" type="button">شيل الصورة</button>
+    </div>
+    <label class="check"><input type="checkbox" id="fPub" checked> ظاهر في الموقع</label>
+    <p class="err" id="fErr" role="alert"></p>
+    <div class="row">
+      <button class="btn btn-gold" type="submit" id="saveBtn">حفظ</button>
+      <button class="btn btn-ghost" type="button" id="cancelBtn">إلغاء</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="/js/types.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

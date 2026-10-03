@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سما العقارية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav" aria-label="القائمة الرئيسية">
+  <a class="logo display" href="#top">
+    <svg viewBox="0 0 44 30" aria-hidden="true"><path d="M5 24a17 17 0 0 1 34 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="22" cy="17" r="4.2" fill="#c9a24d"/><path d="M2 26.5h40" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    سما العقارية
+  </a>
+  <div class="nav-links">
+    <a href="#props">العقارات</a>
+    <a href="#why">ليه سما</a>
+    <a class="btn btn-gold" href="#contact">تواصل معانا</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="horizon" aria-hidden="true"></div>
+  <div class="layer layer-far" id="farLayer" aria-hidden="true"></div>
+  <div class="layer layer-mid" id="midLayer" aria-hidden="true"></div>
+  <div class="skyline" aria-hidden="true"><svg id="skyline" viewBox="0 0 1440 340" preserveAspectRatio="xMidYMax slice"></svg></div>
+  <div class="layer layer-near" aria-hidden="true">
+    <div class="bank bank-l" id="bankL"></div>
+    <div class="bank bank-r" id="bankR"></div>
+  </div>
+
+  <div class="hero-inner">
+    <h1 class="brand display rise d1" aria-label="سما العقارية">
+      <span class="big" aria-hidden="true">سما</span>
+      <span class="small" aria-hidden="true">العقارية</span>
+    </h1>
+    <p class="tagline rise d2">حلمك في السما، وإحنا بنوصّلك له على الأرض.</p>
+    <p class="subline rise d2">شقق وفيلات ومحلات في القاهرة الجديدة و بالأخص مدينة الشروق.</p>
+    <div class="cta rise d3">
+      <a class="btn btn-gold" href="#props">شوف العقارات المتاحة</a>
+      <a class="btn btn-line" href="#contact">كلمنا على واتساب</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= PROPERTIES ================= -->
+<section id="props">
+  <div class="wrap">
+    <h2 class="section-title display">عقارات متاحة دلوقتي</h2>
+    <p class="lead">اختار نوع العقار اللي بتدور عليه، ولو عجبتك وحدة اضغط «اسأل عن الوحدة» وهنفتحلك محادثة واتساب جاهزة.</p>
+    <div class="chips" role="group" aria-label="تصفية العقارات" id="chips"></div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section id="why">
+  <div class="wrap why-grid">
+    <div>
+      <h2 class="section-title display">ليه تختار سما؟</h2>
+      <p class="lead">عشان شراء البيت قرار كبير، ومينفعش يتاخد على أساس صور حلوة بس.</p>
+    </div>
+    <ul class="points">
+      <li>
+        <div class="pico"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div><h3>بنقولك الحقيقة عن الوحدة</h3><p>بنعاين كل وحدة بنفسنا، وبنقولك العيوب قبل المميزات، عشان تقرر وإنت عارف كل حاجة.</p></div>
+      </li>
+      <li>
+        <div class="pico"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 14.5l2 2 3.5-4"/></svg></div>
+        <div><h3>الورق سليم قبل ما تدفع</h3><p>بنراجع العقد والتسجيل والتراخيص مع محامي المكتب قبل أي مبلغ يتحوّل.</p></div>
+      </li>
+      <li>
+        <div class="pico"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></svg></div>
+        <div><h3>معاك لحد الاستلام</h3><p>مش بنختفي بعد التوقيع. بنفضل معاك في التعاقد والتسليم لحد ما تستلم مفتاحك.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<!-- ================= CONTACT (night) ================= -->
+<section class="night" id="contact">
+  <div class="cloud-edge" aria-hidden="true">
+    <svg viewBox="0 0 1600 260" preserveAspectRatio="none">
+      <defs>
+        <filter id="edgeF" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feTurbulence type="fractalNoise" baseFrequency="0.0042 0.012" numOctaves="5" seed="8" result="n"/>
+          <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  3.6 0 0 0 -1.2" result="a"/>
+          <feFlood style="flood-color:var(--bg)" result="f"/>
+          <feComposite in="f" in2="a" operator="in"/>
+        </filter>
+        <linearGradient id="edgeFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".3" stop-color="#fff"/><stop offset=".95" stop-color="#000"/></linearGradient>
+        <mask id="edgeM"><rect width="1600" height="260" fill="url(#edgeFade)"/></mask>
+      </defs>
+      <g mask="url(#edgeM)"><rect width="1600" height="260" filter="url(#edgeF)"/></g>
+      <rect width="1600" height="24" style="fill:var(--bg)"/>
+    </svg>
+  </div>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <div class="wrap contact-grid">
+    <div>
+      <h2 class="section-title display">قولنا إنت بتدور على إيه</h2>
+      <p class="lead">سيب بياناتك وطلبك، وهنكلمك على واتساب في أقرب وقت.</p>
+      <div class="contact-info">
+        <a id="phoneLink" href="#" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          <span dir="ltr" id="phoneText">01010100375</span>
+        </a>
+        <span>
+          <svg class="ico" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span id="addressText">القاهرة - مدينة الشروق</span>
+        </span>
+      </div>
+    </div>
+
+    <form id="leadForm">
+      <label>اسمك
+        <input name="name" required autocomplete="name" placeholder="اكتب اسمك">
+      </label>
+      <label>رقم التليفون
+        <input name="phone" type="tel" required dir="ltr" autocomplete="tel" placeholder="01xxxxxxxxx" style="text-align:right">
+      </label>
+      <label>محتاج إيه؟
+        <select name="need">
+          <option>عايز أشتري عقار</option>
+          <option>عايز أستأجر</option>
+          <option>عايز أبيع عقاري</option>
+          <option>عايز أأجّر عقاري</option>
+        </select>
+      </label>
+      <label>تفاصيل تانية (اختياري)
+        <textarea name="notes" placeholder="المنطقة، الميزانية، عدد الغرف..."></textarea>
+      </label>
+      <button class="btn btn-gold" type="submit">ابعت على واتساب</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span class="display" style="font-size:1.3rem;color:#fff">سما العقارية</span>
+      <span>جميع الحقوق محفوظة 2026</span>
+    </div>
+  </footer>
+</section>
+
+<script src="/js/types.js"></script>
+<script src="/js/art.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/properties.js"></script>
+</body>
+</html>
